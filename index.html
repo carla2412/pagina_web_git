@@ -32,11 +32,24 @@
       <a href="#contacto">Contacto</a>
     </nav>
     <div style="display:flex;gap:10px;align-items:center">
-      <a href="#contacto" class="btn-primary">Ver Plataforma →</a>
-      <div class="hamburger" id="hamburger" onclick="toggleNav()">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
+  
+  <!-- Dropdown "Ver Plataforma" -->
+  <div class="dropdown-wrapper">
+    <button class="btn-primary dropdown-toggle" onclick="toggleDropdown()" id="plataformaBtn">
+      Ver Plataforma ▾
+    </button>
+    <ul class="dropdown-menu" id="plataformaMenu">
+      <li><a class="dropdown-item" href="https://servicios.digisalud.org/jornadas/" target="_blank">Venezuela</a></li>
+      <li><a class="dropdown-item" href="http://servicios.digisalud.org/co/" target="_blank">El Salvador / Guatemala</a></li>
+      <li><a class="dropdown-item" href="http://sv.digisaludlatam.org/sv/" target="_blank">Colombia</a></li>
+    </ul>
+  </div>
+
+  <!-- Hamburger sin cambios -->
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</div>
   </div>
 </header>
 
@@ -56,8 +69,14 @@
         Digisalud ayuda a organizaciones, equipos médicos y aliados a digitalizar jornadas de salud, centralizar información y convertir datos en decisiones con impacto real.
       </p>
       <div class="hero-ctas fade-in visible fade-in-delay-2">
-        <a href="#contacto" class="btn-primary lg">Ver Plataforma →</a>
-        <a href="#solucion" class="btn-secondary lg">Conocer la plataforma</a>
+        
+         <!-- Dropdown "Ver Plataforma" -->
+        <div class="dropdown-wrapper">
+          <button class="btn-primary dropdown-toggle" onclick="toggleDropdown()" id="plataformaBtn">
+            Contactar →
+          </button>
+           
+        </div>
       </div>
       <div class="hero-trust fade-in visible fade-in-delay-3">
         <div class="trust-item">
@@ -385,7 +404,7 @@
           <div class="platform-feature">Historial completo de beneficiarios</div>
           <div class="platform-feature">Reportes descargables y exportables</div>
           <div class="platform-feature">Roles y permisos por equipo</div>
-          <div class="platform-feature">Integración con herramientas externas</div>
+           
         </div>
       </div>
       <div class="fade-in fade-in-delay-2">
@@ -575,7 +594,7 @@
     <h2>¿Quieres modernizar la gestión de tus programas de salud?</h2>
     <p>Conversemos sobre cómo Digisalud puede apoyar a tu organización. Una demo sin compromiso para ver cómo funciona con tu realidad operativa.</p>
     <div class="cta-btns">
-      <a href="mailto:info@digisalud.org" class="btn-white">Ver Plataforma →</a>
+       
       <a href="mailto:info@digisalud.org" class="btn-ghost">Contactar ahora</a>
     </div>
   </div>
@@ -682,6 +701,24 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 document.querySelectorAll('.bar, .bar2').forEach((bar, i) => {
   bar.style.animationDelay = (i * 0.08) + 's';
 });
+
+
+function toggleDropdown() {
+  document.getElementById('plataformaMenu').classList.toggle('open');
+}
+
+// Cierra al hacer clic fuera
+document.addEventListener('click', function(e) {
+  const btn = document.getElementById('plataformaBtn');
+  const menu = document.getElementById('plataformaMenu');
+  if (!btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove('open');
+  }
+});
+
+
 </script>
+
+
 </body>
 </html>
