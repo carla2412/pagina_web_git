@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+   font-family: "Nunito", sans-serif;
   color: var(--navy);
   background: var(--white);
   overflow-x: hidden;
@@ -27,7 +27,7 @@ body {
 }
 
 /* ─── TYPOGRAPHY ─── */
-h1,h2,h3,h4 { font-family: 'Syne', sans-serif; line-height: 1.15; }
+h1,h2,h3,h4 {  font-family: "Nunito", sans-serif; line-height: 1.15; }
 
 /* ─── SCROLLBAR ─── */
 ::-webkit-scrollbar { width: 6px; }
@@ -53,7 +53,7 @@ header.scrolled { box-shadow: 0 2px 24px rgba(10,22,40,0.1); }
     }
 .logo {
   display: flex; align-items: center; gap: 10px;
-  font-family: 'Syne', sans-serif; font-weight: 800;
+   font-family: "Nunito", sans-serif; font-weight: 800;
   font-size: 1.35rem; color: var(--navy); text-decoration: none;
 }
 .logo-icon {
@@ -71,7 +71,7 @@ nav a {
 nav a:hover { color: var(--blue); background: rgba(26,79,216,0.06); }
 .btn-primary {
   background: var(--blue); color: white; border: none; cursor: pointer;
-  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.88rem;
+   font-family: "Nunito", sans-serif; font-weight: 600; font-size: 0.88rem;
   padding: 10px 22px; border-radius: 10px;
   transition: all 0.25s; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
   box-shadow: 0 4px 16px rgba(26,79,216,0.3);
@@ -79,7 +79,7 @@ nav a:hover { color: var(--blue); background: rgba(26,79,216,0.06); }
 .btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); box-shadow: 0 6px 24px rgba(26,79,216,0.38); }
 .btn-secondary {
   background: white; color: var(--blue); border: 1.5px solid var(--blue);
-  font-family: 'DM Sans', sans-serif; font-weight: 600; font-size: 0.88rem;
+   font-family: "Nunito", sans-serif; font-weight: 600; font-size: 0.88rem;
   padding: 10px 22px; border-radius: 10px; cursor: pointer;
   transition: all 0.25s; text-decoration: none; display: inline-flex; align-items: center; gap: 6px;
 }
@@ -172,7 +172,7 @@ nav a:hover { color: var(--blue); background: rgba(26,79,216,0.06); }
 .dash-header {
   display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;
 }
-.dash-title { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: white; }
+.dash-title { font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700; color: white; }
 .dash-badge {
   background: rgba(6,182,212,0.15); color: var(--cyan);
   font-size: 0.65rem; padding: 3px 8px; border-radius: 6px; font-weight: 600;
@@ -183,7 +183,7 @@ nav a:hover { color: var(--blue); background: rgba(26,79,216,0.06); }
   border-radius: 10px; padding: 12px;
 }
 .kpi-label { font-size: 0.62rem; color: rgba(255,255,255,0.4); margin-bottom: 4px; }
-.kpi-value { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 700; color: white; }
+.kpi-value {  font-family: "Nunito", sans-serif; font-size: 1.3rem; font-weight: 700; color: white; }
 .kpi-change { font-size: 0.6rem; color: var(--green); margin-top: 2px; }
 .chart-area {
   background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; margin-bottom: 12px;
@@ -214,7 +214,7 @@ nav a:hover { color: var(--blue); background: rgba(26,79,216,0.06); }
 .float-card.left { left: -50px; bottom: 80px; animation-delay: 0.5s; }
 .float-card.top { right: -20px; top: 60px; }
 @keyframes floatUp { from{transform:translateY(0)} to{transform:translateY(-10px)} }
-.float-num { font-family: 'Syne', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--navy); }
+.float-num { font-family: 'Nunito', sans-serif; font-size: 1.4rem; font-weight: 800; color: var(--navy); }
 .float-label { font-size: 0.7rem; color: var(--gray-muted); }
 .float-green { color: var(--green); font-size: 0.72rem; font-weight: 600; }
 
@@ -243,7 +243,7 @@ section { padding: 90px 32px; }
 .logos-label { font-size: 0.75rem; font-weight: 600; color: rgba(255,255,255,0.35); white-space: nowrap; flex-shrink: 0; text-transform: uppercase; letter-spacing: 0.08em; }
 .logos-track { display: flex; gap: 48px; align-items: center; flex: 1; }
 .logo-chip {
-  font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700;
+  font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700;
   color: rgba(255,255,255,0.35); white-space: nowrap; letter-spacing: 0.02em;
 }
 
@@ -299,7 +299,7 @@ section { padding: 90px 32px; }
 .step-card:hover::before { transform: scaleX(1); }
 .step-card:hover { background: rgba(255,255,255,0.07); transform: translateY(-4px); }
 .step-num {
-  font-family: 'Syne', sans-serif; font-size: 3rem; font-weight: 800;
+  font-family: 'Nunito', sans-serif; font-size: 3rem; font-weight: 800;
   color: rgba(255,255,255,0.06); line-height: 1; margin-bottom: 12px;
 }
 .step-icon {
@@ -373,7 +373,7 @@ section { padding: 90px 32px; }
   background: rgba(255,255,255,0.04); border-radius: 10px; padding: 12px;
   text-align: center;
 }
-.big-kpi-v { font-family: 'Syne', sans-serif; font-size: 1.2rem; font-weight: 700; color: white; }
+.big-kpi-v { font-family: 'Nunito', sans-serif; font-size: 1.2rem; font-weight: 700; color: white; }
 .big-kpi-l { font-size: 0.6rem; color: rgba(255,255,255,0.4); margin-top: 2px; }
 .big-chart { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 14px; }
 .big-chart-title { font-size: 0.65rem; color: rgba(255,255,255,0.35); margin-bottom: 12px; }
@@ -407,7 +407,7 @@ section { padding: 90px 32px; }
 }
 .impact-card:hover { background: rgba(255,255,255,0.08); transform: translateY(-4px); }
 .impact-num {
-  font-family: 'Syne', sans-serif; font-size: 2.6rem; font-weight: 800;
+  font-family: 'Nunito', sans-serif; font-size: 2.6rem; font-weight: 800;
   background: linear-gradient(90deg, var(--cyan-light), white);
   -webkit-background-clip: text; -webkit-text-fill-color: transparent;
   background-clip: text; margin-bottom: 8px;
@@ -422,7 +422,7 @@ section { padding: 90px 32px; }
   position: relative; text-align: center;
 }
 .quote-mark {
-  font-family: 'Syne', sans-serif; font-size: 6rem; color: rgba(26,79,216,0.1);
+  font-family: 'Nunito', sans-serif; font-size: 6rem; color: rgba(26,79,216,0.1);
   line-height: 0.6; margin-bottom: 24px; display: block;
 }
 .testimonial-text {
@@ -434,7 +434,7 @@ section { padding: 90px 32px; }
   width: 44px; height: 44px; border-radius: 50%;
   background: linear-gradient(135deg, var(--blue), var(--cyan));
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-weight: 800; color: white; font-size: 0.9rem;
+  font-family: 'Nunito', sans-serif; font-weight: 800; color: white; font-size: 0.9rem;
 }
 .author-name { font-weight: 700; color: var(--navy); font-size: 0.92rem; }
 .author-org { font-size: 0.8rem; color: var(--gray-muted); }
@@ -465,7 +465,7 @@ section { padding: 90px 32px; }
   backdrop-filter: blur(10px);
 }
 .about-stat-num {
-  font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800; color: white;
+  font-family: 'Nunito', sans-serif; font-size: 1.8rem; font-weight: 800; color: white;
 }
 .about-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.65); margin-top: 4px; }
 .about-mission {
@@ -522,7 +522,7 @@ footer {
 }
 .social-btn:hover { background: rgba(26,79,216,0.4); border-color: var(--blue); }
 .social-btn svg { width: 15px; height: 15px; stroke: rgba(255,255,255,0.6); }
-.footer-col h4 { font-family: 'Syne', sans-serif; font-size: 0.82rem; font-weight: 700; color: white; margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase; }
+.footer-col h4 { font-family: 'Nunito', sans-serif; font-size: 0.82rem; font-weight: 700; color: white; margin-bottom: 16px; letter-spacing: 0.05em; text-transform: uppercase; }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .footer-col ul li a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.83rem; transition: color 0.2s; }
 .footer-col ul li a:hover { color: white; }
@@ -672,7 +672,7 @@ footer {
     }
 
     .ally-logo span {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-weight: 800;
       font-size: 1rem;
       color: white;
