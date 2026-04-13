@@ -1,0 +1,66 @@
+# robots.txt para digisalud.org
+# Última actualización: 2026-04-12
+
+# ── Reglas generales para todos los bots ────────────────────────────────────
+User-agent: *
+
+# Permitir indexación del sitio principal
+Allow: /
+Allow: /assets/
+Allow: /assets/img/
+
+# Bloquear rutas de administración y servicios internos
+Disallow: /admin/
+Disallow: /login/
+Disallow: /dashboard/
+Disallow: /api/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /tmp/
+Disallow: /cgi-bin/
+
+# Bloquear plataformas operativas (subdominios manejados aparte)
+Disallow: /jornadas/
+Disallow: /servicios/
+
+# Bloquear archivos de sistema y desarrollo
+Disallow: /*.env$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.bak$
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# ── Google ───────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Allow: /assets/img/
+Disallow: /admin/
+Disallow: /api/
+
+# ── Bing ─────────────────────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+# ── Bloquear bots de scraping agresivo ───────────────────────────────────────
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# ── Crawl delay para bots genéricos ─────────────────────────────────────────
+User-agent: *
+Crawl-delay: 10
+
+# ── Sitemap ──────────────────────────────────────────────────────────────────
+Sitemap: https://digisalud.org/sitemap.xml

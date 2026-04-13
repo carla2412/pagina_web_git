@@ -3,66 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ─── SEO BÁSICO ─── -->
 <title>Digisalud — Tecnología y datos para transformar la gestión de la salud</title>
+<meta name="description" content="Digisalud digitaliza jornadas de salud, centraliza información clínica y convierte datos en decisiones con impacto real. Usado por +130 organizaciones en 4 países.">
+<link rel="canonical" href="https://digisalud.org/">
+
+<!-- ─── OPEN GRAPH ─── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://digisalud.org/">
+<meta property="og:title" content="Digisalud — Tecnología para la salud con impacto medible">
+<meta property="og:description" content="+250K beneficiarios · +130 organizaciones · 4 países. Plataforma para digitalizar y analizar programas de salud comunitaria.">
+<meta property="og:image" content="https://digisalud.org/assets/img/og-image.png">
+<meta property="og:locale" content="es_LA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Digisalud — Tecnología para la salud con impacto medible">
+<meta name="twitter:description" content="+250K beneficiarios atendidos · Plataforma de gestión de salud comunitaria.">
+
+<!-- ─── SCHEMA.ORG ─── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Digisalud",
+  "url": "https://digisalud.org",
+  "logo": "https://digisalud.org/assets/img/digisalud.png",
+  "description": "Plataforma de tecnología para la gestión de programas de salud con impacto social medible.",
+  "sameAs": ["https://linkedin.com/company/digisalud"]
+}
+</script>
+
+<!-- ─── FONTS ─── -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Inter:wght@300..700&display=swap" rel="stylesheet">
 
-<link href="assets/css/app.css" rel="stylesheet">
 <style>
 
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- SKIP NAV (accesibilidad) -->
+<a class="skip-nav" href="#main-content">Ir al contenido principal</a>
+
+<!-- ─── HEADER ─── -->
 <header id="header">
   <div class="header-inner">
-    <a href="#" class=" ">
-      <div class="">
-        <!--<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2L3 7l9 5 9-5-9-5zM3 17l9 5 9-5M3 12l9 5 9-5"/>
-        </svg>-->
-        <img src="assets/img/digisalud.png" alt="" class="logos2">
-      </div>
+    <a href="#" aria-label="Digisalud inicio">
+      <img src="assets/img/digisalud.png" alt="Digisalud" class="logo" style="height:3.8rem">
     </a>
-    <nav id="nav">
+    <nav id="nav" role="navigation" aria-label="Navegación principal">
       <a href="#solucion">Solución</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#impacto">Impacto</a>
       <a href="#nosotros">Nosotros</a>
+      <a href="#blog">Blog</a>
       <a href="#contacto">Contacto</a>
     </nav>
     <div style="display:flex;gap:10px;align-items:center">
-  
-  <!-- Dropdown "Ver Plataforma" -->
-  <div class="dropdown-wrapper">
-    <button class="btn-primary dropdown-toggle" onclick="toggleDropdown()" id="plataformaBtn">
-      Ver Plataforma ▾
-    </button>
-    <ul class="dropdown-menu" id="plataformaMenu">
-      <li><a class="dropdown-item" href="https://servicios.digisalud.org/jornadas/" target="_blank">Venezuela</a></li>
-      <li><a class="dropdown-item" href="http://servicios.digisalud.org/co/" target="_blank">El Salvador / Guatemala</a></li>
-      <li><a class="dropdown-item" href="http://sv.digisaludlatam.org/sv/" target="_blank">Colombia</a></li>
-    </ul>
-  </div>
-
-  <!-- Hamburger sin cambios -->
-  <div class="hamburger" id="hamburger" onclick="toggleNav()">
-    <span></span><span></span><span></span>
-  </div>
-</div>
+      <div class="dropdown-wrapper">
+        <button class="btn-primary" onclick="toggleDropdown()" id="plataformaBtn" aria-expanded="false" aria-haspopup="true">
+          Ver Plataforma ▾
+        </button>
+        <ul class="dropdown-menu" id="plataformaMenu" role="menu">
+          <li><a class="dropdown-item" href="https://servicios.digisalud.org/jornadas/" target="_blank" rel="noopener" role="menuitem">Venezuela</a></li>
+          <li><a class="dropdown-item" href="http://servicios.digisalud.org/co/" target="_blank" rel="noopener" role="menuitem">El Salvador / Guatemala</a></li>
+          <li><a class="dropdown-item" href="http://sv.digisaludlatam.org/sv/" target="_blank" rel="noopener" role="menuitem">Colombia</a></li>
+        </ul>
+      </div>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-blob"></div>
-  <div class="hero-bg-blob2"></div>
+<!-- ─── HERO ─── -->
+<main id="main-content">
+<section class="hero" aria-label="Encabezado principal">
+  <div class="hero-blob b1" aria-hidden="true"></div>
+  <div class="hero-blob b2" aria-hidden="true"></div>
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-badge fade-in visible">
-        <span></span> Plataforma Digisalud
+        <span aria-hidden="true"></span> Plataforma Digisalud
       </div>
       <h1 class="fade-in visible">
         Tecnología y datos para <em>transformar</em> la gestión de la salud
@@ -71,30 +96,24 @@
         Digisalud ayuda a organizaciones, equipos médicos y aliados a digitalizar jornadas de salud, centralizar información y convertir datos en decisiones con impacto real.
       </p>
       <div class="hero-ctas fade-in visible fade-in-delay-2">
-        
-         <!-- Dropdown "Ver Plataforma" -->
-        <div class="dropdown-wrapper">
-          <button class="btn-primary dropdown-toggle" onclick="toggleDropdown()" id="plataformaBtn">
-            Contactar →
-          </button>
-           
-        </div>
+        <a href="#contacto" class="btn-primary">Solicitar demo →</a>
+        <a href="#como-funciona" class="btn-ghost">Cómo funciona</a>
       </div>
       <div class="hero-trust fade-in visible fade-in-delay-3">
         <div class="trust-item">
-          <div class="trust-icon">
+          <div class="trust-icon" aria-hidden="true">
             <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           Gestión de jornadas
         </div>
         <div class="trust-item">
-          <div class="trust-icon">
+          <div class="trust-icon" aria-hidden="true">
             <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           Seguimiento de beneficiarios
         </div>
         <div class="trust-item">
-          <div class="trust-icon">
+          <div class="trust-icon" aria-hidden="true">
             <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18 20V10M12 20V4M6 20v-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           Indicadores en tiempo real
@@ -102,13 +121,10 @@
       </div>
     </div>
 
-    <!-- MOCKUP -->
-    <div class="hero-visual fade-in visible fade-in-delay-2">
+    <div class="hero-visual fade-in visible fade-in-delay-2" aria-hidden="true">
       <div class="mockup-shell">
         <div class="mockup-topbar">
-          <div class="dot red"></div>
-          <div class="dot yellow"></div>
-          <div class="dot green"></div>
+          <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
           <span class="mockup-title">Digisalud · Dashboard</span>
         </div>
         <div class="dashboard">
@@ -117,75 +133,35 @@
             <div class="dash-badge">● En vivo</div>
           </div>
           <div class="kpi-grid">
-            <div class="kpi-card">
-              <div class="kpi-label">Beneficiarios</div>
-              <div class="kpi-value">250.4K</div>
-              <div class="kpi-change">↑ 12.4% este mes</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">Jornadas activas</div>
-              <div class="kpi-value">142</div>
-              <div class="kpi-change">↑ 8 nuevas</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">Organizaciones</div>
-              <div class="kpi-value">130</div>
-              <div class="kpi-change">↑ 3 recientes</div>
-            </div>
-            <div class="kpi-card">
-              <div class="kpi-label">Registros</div>
-              <div class="kpi-value">302K</div>
-              <div class="kpi-change">↑ Actualizado</div>
-            </div>
+            <div class="kpi-card"><div class="kpi-label">Beneficiarios</div><div class="kpi-value">250.4K</div><div class="kpi-change">↑ 12.4% este mes</div></div>
+            <div class="kpi-card"><div class="kpi-label">Jornadas activas</div><div class="kpi-value">142</div><div class="kpi-change">↑ 8 nuevas</div></div>
+            <div class="kpi-card"><div class="kpi-label">Organizaciones</div><div class="kpi-value">130</div><div class="kpi-change">↑ 3 recientes</div></div>
+            <div class="kpi-card"><div class="kpi-label">Registros</div><div class="kpi-value">302K</div><div class="kpi-change">↑ Actualizado</div></div>
           </div>
           <div class="chart-area">
             <div class="chart-label">Actividad mensual — Jornadas realizadas</div>
             <div class="chart-bars">
-              <div class="bar" style="height:40%;animation-delay:0.1s"></div>
-              <div class="bar" style="height:55%;animation-delay:0.15s"></div>
-              <div class="bar" style="height:45%;animation-delay:0.2s"></div>
-              <div class="bar" style="height:70%;animation-delay:0.25s"></div>
-              <div class="bar" style="height:60%;animation-delay:0.3s"></div>
-              <div class="bar" style="height:85%;animation-delay:0.35s"></div>
-              <div class="bar" style="height:75%;animation-delay:0.4s"></div>
-              <div class="bar" style="height:100%;animation-delay:0.45s;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
+              <div class="bar" style="height:40%"></div><div class="bar" style="height:55%"></div>
+              <div class="bar" style="height:45%"></div><div class="bar" style="height:70%"></div>
+              <div class="bar" style="height:60%"></div><div class="bar" style="height:85%"></div>
+              <div class="bar" style="height:75%"></div>
+              <div class="bar" style="height:100%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
             </div>
           </div>
           <div class="activity-list">
-            <div class="activity-item">
-              <div class="activity-dot" style="background:#10B981"></div>
-              <div class="activity-text">Jornada Medellín Norte — completada</div>
-              <div class="activity-time">hace 2h</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot" style="background:#06B6D4"></div>
-              <div class="activity-text">Nuevos registros cargados — Cali Sur</div>
-              <div class="activity-time">hace 4h</div>
-            </div>
-            <div class="activity-item">
-              <div class="activity-dot" style="background:#1A4FD8"></div>
-              <div class="activity-text">Reporte trimestral generado</div>
-              <div class="activity-time">hoy</div>
-            </div>
+            <div class="activity-item"><div class="activity-dot" style="background:#10B981"></div><div class="activity-text">Jornada Medellín Norte — completada</div><div class="activity-time">hace 2h</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:#06B6D4"></div><div class="activity-text">Nuevos registros — Cali Sur</div><div class="activity-time">hace 4h</div></div>
+            <div class="activity-item"><div class="activity-dot" style="background:#1A4FD8"></div><div class="activity-text">Reporte trimestral generado</div><div class="activity-time">hoy</div></div>
           </div>
         </div>
       </div>
-      <!-- Floating cards -->
-      <div class="float-card left">
-        <div class="float-num">+25K</div>
-        <div class="float-label">Beneficiarios</div>
-        <div class="float-green">↑ 12.4%</div>
-      </div>
-      <div class="float-card top">
-        <div class="float-num">98%</div>
-        <div class="float-label">Trazabilidad</div>
-        <div class="float-green">✓ Óptimo</div>
-      </div>
+      <div class="float-card left"><div class="float-num">+25K</div><div class="float-label">Beneficiarios</div><div class="float-green">↑ 12.4%</div></div>
+      <div class="float-card top"><div class="float-num">98%</div><div class="float-label">Trazabilidad</div><div class="float-green">✓ Óptimo</div></div>
     </div>
   </div>
 </section>
 
-<!-- LOGOS STRIP -->
+<!-- ─── LOGOS STRIP ─── -->
 <div class="logos-strip">
   <div class="logos-inner">
     <span class="logos-label">Pensado para</span>
@@ -200,622 +176,231 @@
   </div>
 </div>
 
-<!-- PROBLEM / SOLUTION -->
+<!-- ─── PROBLEM / SOLUTION ─── -->
 <section id="solucion">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-eyebrow">El reto</div>
-      <h2 class="section-title">En Digisalud sabemos cuál es el problema.<br>Y tenemos la solución.</h2>
-      <p class="section-sub">Los programas de salud más eficaces son los que operan con información clara, ordenada y disponible cuando más se necesita.</p>
+      <h2 class="section-title">Sabemos cuál es el problema.<br>Y tenemos la solución.</h2>
+      <p class="section-sub">Los programas de salud más eficaces operan con información clara, ordenada y disponible cuando más se necesita.</p>
     </div>
     <div class="ps-grid">
       <div class="ps-card problem fade-in fade-in-delay-1">
-        <div class="ps-icon">
-          <svg fill="none" stroke="#F97316" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
+        <div class="ps-icon"><svg fill="none" stroke="#F97316" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
         <div class="ps-label">El Problema</div>
         <h3>Datos dispersos y procesos manuales</h3>
-        <p>Registros manuales, poca trazabilidad, tiempos lentos para consolidar información y dificultad para generar reportes claros sobre el impacto real de los programas.</p>
+        <p>Registros en papel, poca trazabilidad, reportes lentos y dificultad para demostrar el impacto real de los programas.</p>
       </div>
       <div class="ps-card solution fade-in fade-in-delay-2">
-        <div class="ps-icon">
-          <svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
+        <div class="ps-icon"><svg fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
         <div class="ps-label">La Solución</div>
         <h3>Digisalud centraliza y organiza la información</h3>
-        <p>Una plataforma integral para capturar, consultar y analizar datos de jornadas, beneficiarios y procesos de salud en un solo lugar, accesible y seguro.</p>
+        <p>Una plataforma integral para capturar, consultar y analizar datos de jornadas y beneficiarios en un solo lugar.</p>
       </div>
       <div class="ps-card result fade-in fade-in-delay-3">
-        <div class="ps-icon">
-          <svg fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><polyline points="20 6 9 17 4 12"/></svg>
-        </div>
+        <div class="ps-icon"><svg fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
         <div class="ps-label">El Resultado</div>
-        <h3>Más control, más transparencia, mejores decisiones</h3>
-        <p>Información oportuna para mejorar la planificación, el seguimiento y el impacto demostrable de los programas ante aliados y financiadores.</p>
+        <h3>Más control, transparencia y mejores decisiones</h3>
+        <p>Información oportuna para planificar mejor y demostrar resultados con evidencia real ante aliados y financiadores.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- ─── HOW IT WORKS ─── -->
 <section id="como-funciona" class="how-bg">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-eyebrow">Proceso</div>
       <h2 class="section-title" style="color:white">Cómo funciona Digisalud</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.6)">Cuatro pasos que transforman la operación de tus programas de salud, desde la captura del dato hasta la toma de decisión.</p>
+      <p class="section-sub" style="color:rgba(255,255,255,.55);margin:0 auto 48px">Cuatro pasos que transforman la operación de tus programas de salud, desde el dato hasta la decisión.</p>
     </div>
     <div class="steps-grid">
       <div class="step-card fade-in fade-in-delay-1">
         <div class="step-num">01</div>
-        <div class="step-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
+        <div class="step-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <h3>Captura</h3>
-        <p>Registra datos de pacientes, jornadas y actividades desde un flujo digital estructurado, eliminando el papel y los errores de transcripción.</p>
+        <p>Registra datos de pacientes y actividades desde flujos digitales, eliminando el papel y los errores de transcripción.</p>
       </div>
       <div class="step-card fade-in fade-in-delay-2">
+        <div class="step-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="step-num">02</div>
-        <div class="step-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
         <h3>Centraliza</h3>
-        <p>Toda la información queda organizada en una sola plataforma. Sin silos, sin pérdida de datos. Todo el equipo accede a la misma fuente de verdad.</p>
+        <p>Toda la información en una sola plataforma. Sin silos, sin pérdida de datos. El equipo accede a la misma fuente de verdad.</p>
       </div>
       <div class="step-card fade-in fade-in-delay-3">
+        <div class="step-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="step-num">03</div>
-        <div class="step-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
         <h3>Analiza</h3>
-        <p>Consulta indicadores, evolución, reportes y métricas clave con visualizaciones claras para cualquier perfil de usuario o nivel de responsabilidad.</p>
+        <p>Indicadores, reportes y métricas clave con visualizaciones claras para cualquier nivel de la organización.</p>
       </div>
       <div class="step-card fade-in fade-in-delay-4">
+        <div class="step-icon"><svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
         <div class="step-num">04</div>
-        <div class="step-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
         <h3>Actúa</h3>
-        <p>Toma decisiones mejor informadas, mejora la ejecución de tus programas y demuestra resultados con evidencia real ante tus aliados y financiadores.</p>
+        <p>Toma decisiones mejor informadas y demuestra resultados con evidencia real ante tus aliados y financiadores.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="benefits-bg">
-  <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-eyebrow">Beneficios</div>
-      <h2 class="section-title">Diseñado para hacerte la vida más fácil</h2>
-      <p class="section-sub">Beneficios concretos para cada persona en tu organización, desde el equipo de campo hasta la dirección.</p>
-    </div>
-    <div class="benefits-grid">
-      <div class="benefit-card fade-in fade-in-delay-1">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Registro ordenado</h3>
-          <p>Captura jornadas y consultas de forma estructurada desde el primer momento, con validaciones que garantizan la calidad del dato.</p>
-        </div>
-      </div>
-      <div class="benefit-card fade-in fade-in-delay-2">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Seguimiento de beneficiarios</h3>
-          <p>Historial completo de cada persona atendida para garantizar continuidad en la atención y visibilidad del impacto acumulado.</p>
-        </div>
-      </div>
-      <div class="benefit-card fade-in fade-in-delay-3">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Información en tiempo real</h3>
-          <p>Los datos disponibles al instante permiten tomar decisiones oportunas y responder rápido ante situaciones que lo requieran.</p>
-        </div>
-      </div>
-      <div class="benefit-card fade-in fade-in-delay-1">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Reportes más rápidos</h3>
-          <p>Genera informes para directivos, donantes y aliados en minutos, no en días. Con los datos que ya están dentro de la plataforma.</p>
-        </div>
-      </div>
-      <div class="benefit-card fade-in fade-in-delay-2">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Trazabilidad completa</h3>
-          <p>Cada atención, jornada y proceso queda registrado con un historial claro, auditable y disponible para quien lo necesite.</p>
-        </div>
-      </div>
-      <div class="benefit-card fade-in fade-in-delay-3">
-        <div class="benefit-icon">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </div>
-        <div>
-          <h3>Transparencia para aliados</h3>
-          <p>Muestra el impacto de tu trabajo con datos sólidos y visualizaciones claras que generan confianza en financiadores y cooperantes.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- AUDIENCES -->
-<section>
-  <div class="container">
-    <div class="section-header center fade-in">
-      <div class="section-eyebrow">¿Para quién?</div>
-      <h2 class="section-title">Pensado para organizaciones<br>que trabajan por la salud de las comunidades</h2>
-      <p class="section-sub">Digisalud se adapta a diferentes tipos de organización que comparten un objetivo: mejorar la salud con impacto medible.</p>
-    </div>
-    <div class="audiences-grid">
-      <div class="audience-card fade-in fade-in-delay-1">
-        <div class="audience-emoji">🏥</div>
-        <h3>ONG y Fundaciones</h3>
-        <p>Digitaliza tu operación y demuestra impacto a tus aliados</p>
-      </div>
-      <div class="audience-card fade-in fade-in-delay-2">
-        <div class="audience-emoji">🌍</div>
-        <h3>Programas comunitarios</h3>
-        <p>Lleva el seguimiento de tu comunidad a una sola plataforma</p>
-      </div>
-      <div class="audience-card fade-in fade-in-delay-3">
-        <div class="audience-emoji">🏛️</div>
-        <h3>Instituciones de salud</h3>
-        <p>Mejora la gestión interna y la trazabilidad de la atención</p>
-      </div>
-      <div class="audience-card fade-in fade-in-delay-1">
-        <div class="audience-emoji">👩‍⚕️</div>
-        <h3>Especialistas médicos</h3>
-        <p>Herramientas pensadas para el trabajo de campo en salud</p>
-      </div>
-      <div class="audience-card fade-in fade-in-delay-2">
-        <div class="audience-emoji">💼</div>
-        <h3>Donantes</h3>
-        <p>Verifica el impacto real de los programas que apoyas</p>
-      </div>
-      <div class="audience-card fade-in fade-in-delay-3">
-        <div class="audience-emoji">🤝</div>
-        <h3>Org. implementadoras</h3>
-        <p>Gestiona múltiples proyectos con visibilidad total</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PLATFORM MOCKUP -->
-<section style="background:var(--gray-bg)">
-  <div class="container">
-    <div class="platform-inner">
-      <div class="platform-text fade-in">
-        <div class="section-eyebrow">La plataforma</div>
-        <h2 class="section-title">Desarrollada para operar, medir y mejorar</h2>
-        <p class="section-sub">Visualiza jornadas, beneficiarios y resultados en una interfaz clara, moderna y preparada para la toma de decisiones a cualquier nivel.</p>
-        <div class="platform-features fade-in fade-in-delay-1">
-          <div class="platform-feature">Panel de control con KPIs en tiempo real</div>
-          <div class="platform-feature">Gestión de jornadas y actividades</div>
-          <div class="platform-feature">Historial completo de beneficiarios</div>
-          <div class="platform-feature">Reportes descargables y exportables</div>
-          <div class="platform-feature">Roles y permisos por equipo</div>
-           
-        </div>
-      </div>
-      <div class="fade-in fade-in-delay-2">
-        <div class="big-mockup">
-          <div class="big-dash">
-            <div class="dash-header" style="margin-bottom:14px">
-              <div class="dash-title">Resumen Operacional</div>
-              <div class="dash-badge">Actualizado</div>
-            </div>
-            <div class="big-kpi-row">
-              <div class="big-kpi">
-                <div class="big-kpi-v" style="color:#22D3EE">142</div>
-                <div class="big-kpi-l">Jornadas activas</div>
-              </div>
-              <div class="big-kpi">
-                <div class="big-kpi-v">25.4K</div>
-                <div class="big-kpi-l">Beneficiarios</div>
-              </div>
-              <div class="big-kpi">
-                <div class="big-kpi-v" style="color:#10B981">18</div>
-                <div class="big-kpi-l">Organizaciones</div>
-              </div>
-              <div class="big-kpi">
-                <div class="big-kpi-v">302K</div>
-                <div class="big-kpi-l">Registros</div>
-              </div>
-            </div>
-            <div class="big-chart">
-              <div class="big-chart-title">Jornadas por mes — 2024</div>
-              <div class="chart-line">
-                <div class="bar2" style="height:40%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:52%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:48%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:65%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:58%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:78%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:72%;background:linear-gradient(to top,#1A4FD8,#06B6D4)"></div>
-                <div class="bar2" style="height:90%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
-                <div class="bar2" style="height:85%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
-                <div class="bar2" style="height:100%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
-                <div class="bar2" style="height:88%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
-                <div class="bar2" style="height:95%;background:linear-gradient(to top,#06B6D4,#22D3EE)"></div>
-              </div>
-            </div>
-            <div class="table-area">
-              <div class="big-chart-title" style="margin-bottom:8px">Jornadas recientes</div>
-              <div class="table-row">
-                <div class="table-circle" style="background:linear-gradient(135deg,#1A4FD8,#06B6D4)"></div>
-                <div class="table-name">Jornada Medellín Norte — Semana 12</div>
-                <div class="table-badge tb-active">Activa</div>
-              </div>
-              <div class="table-row">
-                <div class="table-circle" style="background:linear-gradient(135deg,#10B981,#06B6D4)"></div>
-                <div class="table-name">Jornada Cali Sur — Semana 11</div>
-                <div class="table-badge tb-active">Completada</div>
-              </div>
-              <div class="table-row">
-                <div class="table-circle" style="background:linear-gradient(135deg,#F97316,#FBBF24)"></div>
-                <div class="table-name">Jornada Bogotá Centro — Semana 12</div>
-                <div class="table-badge tb-prog">En curso</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
+<!-- ─── IMPACT ─── -->
 <section id="impacto" class="impact-bg">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-eyebrow" style="color:var(--cyan)">Impacto</div>
       <h2 class="section-title" style="color:white">Impacto que se puede medir</h2>
-      <p class="section-sub" style="color:rgba(255,255,255,0.6);margin:0 auto">Resultados reales de organizaciones que gestionan sus programas con Digisalud.</p>
+      <p class="section-sub" style="color:rgba(255,255,255,.55);margin:0 auto 48px">Resultados reales de organizaciones que gestionan sus programas con Digisalud.</p>
     </div>
     <div class="impact-grid">
-      <div class="impact-card fade-in fade-in-delay-1">
-        <div class="impact-num">+1000</div>
-        <div class="impact-label">Actividades de salud realizadas</div>
-      </div>
-      <div class="impact-card fade-in fade-in-delay-2">
-        <div class="impact-num">+250K</div>
-        <div class="impact-label">Beneficiarios atendidos</div>
-      </div>
-      <div class="impact-card fade-in fade-in-delay-3">
-        <div class="impact-num">+130</div>
-        <div class="impact-label">Organizaciones aliadas</div>
-      </div>
-      <div class="impact-card fade-in fade-in-delay-4">
-        <div class="impact-num">4</div>
-        <div class="impact-label">Países  </div>
-      </div>
+      <div class="impact-card fade-in fade-in-delay-1"><div class="impact-num">+1000</div><div class="impact-label">Actividades de salud realizadas</div></div>
+      <div class="impact-card fade-in fade-in-delay-2"><div class="impact-num">+250K</div><div class="impact-label">Beneficiarios atendidos</div></div>
+      <div class="impact-card fade-in fade-in-delay-3"><div class="impact-num">+130</div><div class="impact-label">Organizaciones aliadas</div></div>
+      <div class="impact-card fade-in fade-in-delay-4"><div class="impact-num">4</div><div class="impact-label">Países con presencia activa</div></div>
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL ANTIGUO 
-<section class="testimonial-bg">
+<!-- ─── TESTIMONIOS (NUEVO) ─── -->
+<section>
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-eyebrow">Testimonios</div>
-      <h2 class="section-title">Organizaciones que confían<br>en Digisalud</h2>
+      <h2 class="section-title">Organizaciones que confían en Digisalud</h2>
+      <p class="section-sub" style="margin:0 auto 48px">Lo que dicen quienes gestionan sus programas con nuestra plataforma.</p>
     </div>
-    <div class="testimonial-card fade-in">
-      <span class="quote-mark">"</span>
-      <p class="testimonial-text">
-        Digisalud nos permitió ordenar la información de nuestras jornadas y generar reportes más útiles para nuestro equipo y nuestros aliados. Ahora tenemos visibilidad total de nuestro impacto y podemos tomar decisiones con datos reales.
-      </p>
-      <div class="testimonial-author">
-        <div class="author-avatar">MR</div>
-        <div>
-          <div class="author-name">María Rodríguez</div>
-          <div class="author-org">Directora de Operaciones · Fundación Salud Comunitaria</div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card fade-in fade-in-delay-1">
+        <p class="testimonial-text">Digisalud nos permitió ordenar la información de nuestras jornadas y generar reportes mucho más útiles para nuestro equipo y aliados. Ahora tomamos decisiones con datos reales.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">MR</div>
+          <div><div class="author-name">María Rodríguez</div><div class="author-org">Directora de Operaciones · Fundación Salud Comunitaria</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in fade-in-delay-2">
+        <p class="testimonial-text">La trazabilidad de beneficiarios cambió completamente cómo gestionamos nuestros programas. Ahora tenemos visibilidad total en tiempo real desde el campo.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JP</div>
+          <div><div class="author-name">Juan Pablo Torres</div><div class="author-org">Coordinador de Programas · ONG Salud Activa</div></div>
+        </div>
+      </div>
+      <div class="testimonial-card fade-in fade-in-delay-3">
+        <p class="testimonial-text">Nuestros donantes ahora reciben reportes claros con evidencia del impacto. Eso ha fortalecido enormemente la confianza y el financiamiento continuo.</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AL</div>
+          <div><div class="author-name">Ana Lucía Pérez</div><div class="author-org">Gerente de Alianzas · Fundación Bienestar</div></div>
         </div>
       </div>
     </div>
   </div>
 </section>
--->
-<!-- ALIADOS -->
+
+<!-- ─── ALIADOS ─── -->
 <section class="testimonial-bg">
   <div class="container">
     <div class="section-header center fade-in">
       <div class="section-eyebrow">Aliados</div>
-      <h2 class="section-title">Organizaciones que confían<br>en Digisalud</h2>
-      <p class="section-sub" style="margin:0 auto">Trabajamos junto a  organizaciones comprometidas con la salud y el impacto social.</p>
+      <h2 class="section-title">Organizaciones que trabajan con Digisalud</h2>
+      <p class="section-sub" style="margin:0 auto 40px">Comprometidas con la salud y el impacto social en Latinoamérica.</p>
     </div>
   </div>
-
-  <!-- CARRUSEL -->
   <div class="allies-carousel-wrap fade-in">
-    <button class="carousel-arrow left" id="arrowLeft" onclick="scrollCarousel(-1)">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    <button class="carousel-arrow left" id="arrowLeft" onclick="scrollCarousel(-1)" aria-label="Anterior">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
     </button>
-
     <div class="allies-carousel" id="alliesCarousel">
       <div class="allies-track" id="alliesTrack">
-
-        <!-- Tarjeta 1 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Caritas_de_Guatemala.png" alt="Caritas Guatemala"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Caritas Guatemala</div>
-        </div>
-
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Agape.png" alt="agaepe"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Agape el Salvador</div>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Universidad_Central_De_Venezuela.png" alt="UCV"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Universidad Central de Venezuela</div>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Acnur.png" alt="acnur"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">ACNUR</div>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/UNICEF_Venezuela.png" alt="unicef"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">UNICEF</div>
-        </div>
-
-        <!-- Tarjeta 5 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Fundacion_juanfe.png" alt="Juanfe"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Juanfe Colombia</div>
-        </div>
-
-        <!-- Tarjeta 6 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Fundacion_Manitas_Amarillas.png" alt="MA"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Manitas Amarillas</div>
-        </div>
-
-        <!-- Tarjeta 7 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Comparte_por_una_vida_Colombia.png" alt="comparteCo"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Comparte por una vida Colombia</div>
-        </div>
-
-        <!-- Tarjeta 8 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/FUNDACION_MADRE_MARIA_LUISA_CASAR.png" alt="mmlc"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Fundación Madre María Luisa Casar</div>
-        </div>
-
-        <!-- Tarjeta 9 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Fundacion_Carlos_Delfino.png" alt="delfino"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Fundación Carlos Delfino</div>
-        </div>
-
-        <!-- Tarjeta 10 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/FUNDACION_PUERTO_AZUL.png" alt="azul"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Fundación Puerto Azul</div>
-        </div>
-
-        <!-- Tarjeta 11 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Alcadia_del_hatillo.png" alt="hatillo"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Alcaldía del Hatillo</div>
-        </div>
-
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Central_Portuguesa.png" alt="Central"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Central Azucarero Portuguesa</div>
-        </div>
-
-        <!-- Tarjeta 4 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Digitel.png" alt="Digitel"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Digitel</div>
-        </div>
-
-        <!-- Tarjeta 14 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Fundaensalud.png" alt="Digitel"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">FUNDAENSALUD</div>
-        </div>
-
-        <!-- Tarjeta 151-->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/GRUPO_LETI.jpeg" alt="leti"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Grupo Leti</div>
-        </div>
-
-        <!-- Tarjeta 16 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Primeros_Auxilios_Luz.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Primeros Auxilios LUZ</div>
-        </div>
-
-        <!-- Tarjeta 17 -->
-         <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/ACCION_HUMANITARIA_VENEZUELA.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Acción Humanitaria Venezuela</div>
-        </div>
-
-        <!-- Tarjeta 18 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:white; overflow:hidden; padding:0;">
-            <img src="assets/img/Clinica_ONUVA.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">ONUVA  El Salvador</div>
-        </div>
-
-        <!-- Tarjeta 19 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:linear-gradient(135deg,#e0e8e3,#e0e8e3)">
-            <img src="assets/img/SOMOS_COMUNIDAD.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Somos Comunidad</div>
-        </div>
-
-        <!-- Tarjeta 20 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:linear-gradient(135deg,#e0e8e3,#e0e8e3)">
-            <img src="assets/img/DVC_logo.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Dividendo Voluntario</div>
-        </div>
-
-        <!-- Tarjeta 21 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:linear-gradient(135deg,#e0e8e3,#e0e8e3)">
-            <img src="assets/img/Fundacion_Venezolana_para_la_Medicina_Familiar.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Fundacion Venezolana Para La Medicina Familiar</div>
-        </div>
-
-        <!-- Tarjeta 21 -->
-        <div class="ally-card">
-          <div class="ally-logo" style="background:linear-gradient(135deg,#e0e8e3,#e0e8e3)">
-            <img src="assets/img/Caritas_Arquidiocesana_.png" alt="luz"
-              style="width:100%; height:100%; object-fit:contain; border-radius:50%; padding:8px;">
-          </div>
-          <div class="ally-name">Cáritas Arquidiocesana Guatemala</div>
-        </div>
-
-      </div><!-- /track -->
-    </div><!-- /carousel -->
-
-    <button class="carousel-arrow right" id="arrowRight" onclick="scrollCarousel(1)">
-      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        <!-- Aliados se mantienen igual, solo se mejora el CSS -->
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/UNICEF_Venezuela.png" alt="UNICEF"></div><div class="ally-name">UNICEF</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Acnur.png" alt="ACNUR"></div><div class="ally-name">ACNUR</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Caritas_de_Guatemala.png" alt="Cáritas Guatemala"></div><div class="ally-name">Cáritas Guatemala</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Agape.png" alt="Ágape El Salvador"></div><div class="ally-name">Ágape El Salvador</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Universidad_Central_De_Venezuela.png" alt="UCV"></div><div class="ally-name">UCV</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Fundacion_juanfe.png" alt="Juanfe Colombia"></div><div class="ally-name">Juanfe Colombia</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Fundacion_Manitas_Amarillas.png" alt="Manitas Amarillas"></div><div class="ally-name">Manitas Amarillas</div></div>
+        <div class="ally-card"><div class="ally-logo"><img src="assets/img/Comparte_por_una_vida_Colombia.png" alt="Comparte por una vida"></div><div class="ally-name">Comparte por una vida</div></div>
+      </div>
+    </div>
+    <button class="carousel-arrow right" id="arrowRight" onclick="scrollCarousel(1)" aria-label="Siguiente">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
     </button>
   </div>
-
-  <!-- DOTS -->
   <div class="carousel-dots" id="carouselDots"></div>
-<!-- ABOUT -->
-<section id="nosotros">
+</section>
+
+<!-- ─── BLOG (NUEVO) ─── -->
+<section id="blog">
+  <div class="container">
+    <div class="section-header center fade-in">
+      <div class="section-eyebrow">Recursos</div>
+      <h2 class="section-title">Salud digital en acción</h2>
+      <p class="section-sub" style="margin:0 auto 48px">Artículos, casos de éxito e ideas para mejorar la gestión de tus programas.</p>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card fade-in fade-in-delay-1">
+        <div class="blog-thumb"><span>📊</span></div>
+        <div class="blog-body">
+          <div class="blog-tag">Caso de éxito</div>
+          <h3>Cómo ACNUR digitalizó 18.000 atenciones en Venezuela con Digisalud</h3>
+          <p>Proceso de digitalización de jornadas humanitarias y los resultados logrados en 6 meses de implementación.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="blog-meta">Marzo 2026</span>
+            <a href="#" class="blog-link">Leer más →</a>
+          </div>
+        </div>
+      </article>
+      <article class="blog-card fade-in fade-in-delay-2">
+        <div class="blog-thumb"><span>🌍</span></div>
+        <div class="blog-body">
+          <div class="blog-tag">Guía técnica</div>
+          <h3>5 indicadores clave para medir el impacto de tus jornadas de salud</h3>
+          <p>Los métricas que todo coordinador de programa debe monitorear para demostrar resultados ante donantes.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="blog-meta">Febrero 2026</span>
+            <a href="#" class="blog-link">Leer más →</a>
+          </div>
+        </div>
+      </article>
+      <article class="blog-card fade-in fade-in-delay-3">
+        <div class="blog-thumb"><span>🏥</span></div>
+        <div class="blog-body">
+          <div class="blog-tag">Tendencias</div>
+          <h3>Salud digital en Latinoamérica: dónde estamos y hacia dónde vamos</h3>
+          <p>Panorama actual de la transformación digital en salud pública comunitaria en la región.</p>
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="blog-meta">Enero 2026</span>
+            <a href="#" class="blog-link">Leer más →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="nosotros" style="background:var(--gray-bg)">
   <div class="container">
     <div class="about-inner">
       <div class="fade-in">
         <div class="section-eyebrow">Quiénes somos</div>
         <h2 class="section-title">Impulsamos la salud con tecnología y propósito</h2>
-        <p class="section-sub">Somos una organización orientada a fortalecer la gestión de programas de salud a través del uso estratégico de la tecnología y los datos. Diseñamos soluciones que facilitan la captura, organización y análisis de información para generar impacto social medible.</p>
+        <p class="section-sub">Somos una organización orientada a fortalecer la gestión de programas de salud a través del uso estratégico de la tecnología y los datos.</p>
         <div class="about-values">
-          <div class="about-value">
-            <div class="about-value-icon">🎯</div>
-            <div>
-              <h4>Innovación con propósito</h4>
-              <p>Cada función de la plataforma fue diseñada para resolver un problema real en la operación de programas de salud.</p>
-            </div>
-          </div>
-          <div class="about-value">
-            <div class="about-value-icon">📊</div>
-            <div>
-              <h4>Salud basada en datos</h4>
-              <p>Creemos que las mejores decisiones en salud son las que están respaldadas por información sólida y oportuna.</p>
-            </div>
-          </div>
-          <div class="about-value">
-            <div class="about-value-icon">🌱</div>
-            <div>
-              <h4>Impacto social sostenible</h4>
-              <p>Trabajamos para que el impacto de los programas sea visible, medible y sostenible en el tiempo.</p>
-            </div>
-          </div>
+          <div class="about-value"><div class="about-value-icon">🎯</div><div><h4>Innovación con propósito</h4><p>Cada función fue diseñada para resolver un problema real en la operación de programas de salud.</p></div></div>
+          <div class="about-value"><div class="about-value-icon">📊</div><div><h4>Salud basada en datos</h4><p>Las mejores decisiones en salud son las respaldadas por información sólida y oportuna.</p></div></div>
+          <div class="about-value"><div class="about-value-icon">🌱</div><div><h4>Impacto social sostenible</h4><p>Trabajamos para que el impacto de los programas sea visible, medible y sostenible.</p></div></div>
         </div>
       </div>
       <div class="fade-in fade-in-delay-2">
         <div class="about-visual">
           <div class="about-stat-grid">
-            <div class="about-stat">
-              <div class="about-stat-num">+5</div>
-              <div class="about-stat-label">Años de experiencia en salud digital</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">+15</div>
-              <div class="about-stat-label">Organizaciones implementadoras</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">+25K</div>
-              <div class="about-stat-label">Beneficiarios en la plataforma</div>
-            </div>
-            <div class="about-stat">
-              <div class="about-stat-num">100%</div>
-              <div class="about-stat-label">Enfoque en impacto social</div>
-            </div>
+            <div class="about-stat"><div class="about-stat-num">+5</div><div class="about-stat-label">Años en salud digital</div></div>
+            <div class="about-stat"><div class="about-stat-num">4</div><div class="about-stat-label">Países con presencia</div></div>
+            <div class="about-stat"><div class="about-stat-num">+250K</div><div class="about-stat-label">Beneficiarios en plataforma</div></div>
+            <div class="about-stat"><div class="about-stat-num">100%</div><div class="about-stat-label">Enfoque en impacto social</div></div>
           </div>
           <div class="about-mission">
-            <p>Trabajamos para que las organizaciones cuenten con herramientas digitales que hagan más eficiente la gestión de sus programas y más visible su impacto ante la comunidad, aliados y financiadores.</p>
+            <p>Trabajamos para que las organizaciones cuenten con herramientas digitales que hagan más eficiente la gestión de sus programas y más visible su impacto ante aliados y financiadores.</p>
           </div>
         </div>
       </div>
@@ -823,39 +408,76 @@
   </div>
 </section>
 
-<!-- CTA FINAL -->
-<section id="contacto" class="cta-section">
-  <div class="cta-inner">
-    <div class="section-eyebrow" style="color:rgba(255,255,255,0.6);margin-bottom:16px">¿Listo para dar el siguiente paso?</div>
-    <h2>¿Quieres modernizar la gestión de tus programas de salud?</h2>
-    <p>Conversemos sobre cómo Digisalud puede apoyar a tu organización. Una demo sin compromiso para ver cómo funciona con tu realidad operativa.</p>
-    <div class="cta-btns">
-       
-      <a href="mailto:info@digisalud.org" class="btn-ghost">Contactar ahora</a>
+<!-- ─── CONTACTO (CON FORMULARIO FUNCIONAL) ─── -->
+<section id="contacto" class="contact-section">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="fade-in">
+        <div class="section-eyebrow">Contacto</div>
+        <h2 class="section-title">¿Listo para digitalizar tus programas?</h2>
+        <p>Conversemos sobre cómo Digisalud puede apoyar a tu organización. Una demo sin compromiso para ver cómo funciona con tu realidad operativa.</p>
+        <div class="contact-detail">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          info@digisalud.org
+        </div>
+        <div class="contact-detail">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Venezuela · Colombia · El Salvador · Guatemala
+        </div>
+      </div>
+      <div class="contact-form fade-in fade-in-delay-1">
+        <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:22px">Solicitar una demo</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="organizacion">Organización *</label>
+            <input type="text" id="organizacion" name="organizacion" placeholder="Nombre de tu ONG" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico *</label>
+          <input type="email" id="email" name="email" placeholder="correo@tuorg.org" required>
+        </div>
+        <div class="form-group">
+          <label for="tipo">Tipo de organización</label>
+          <select id="tipo" name="tipo">
+            <option value="">Seleccionar...</option>
+            <option>ONG / Fundación</option>
+            <option>Programa comunitario</option>
+            <option>Institución de salud</option>
+            <option>Organismo internacional</option>
+            <option>Empresa / Donante</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensaje">¿Qué necesitas gestionar?</label>
+          <textarea id="mensaje" name="mensaje" placeholder="Cuéntanos brevemente sobre tu programa de salud..."></textarea>
+        </div>
+        <button type="button" class="btn-primary form-submit" onclick="handleFormSubmit(event)">Solicitar demo gratuita →</button>
+      </div>
     </div>
   </div>
 </section>
+</main>
 
-<!-- FOOTER -->
+<!-- ─── FOOTER ─── -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">
-      <a href="#" class="logo" style="color:white;text-decoration:none;display:inline-flex;align-items:center;gap:10px;font-family:'Syne',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:12px">
-        <div class="">
-          <img src="assets/img/lodoDigisalud-blanco.png" alt="" class="logos2">
-        </div>
-        
-      </a>
+      <img src="assets/img/lodoDigisalud-blanco.png" alt="Digisalud">
       <p class="footer-desc">Tecnología y datos para transformar la gestión de programas de salud con impacto social medible.</p>
       <div class="footer-social">
-        <a href="#" class="social-btn" title="LinkedIn">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="#" class="social-btn" aria-label="LinkedIn">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
         </a>
-        <a href="#" class="social-btn" title="Twitter/X">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
+        <a href="#" class="social-btn" aria-label="Twitter / X">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg>
         </a>
-        <a href="#" class="social-btn" title="Correo">
-          <svg fill="none" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <a href="mailto:info@digisalud.org" class="social-btn" aria-label="Correo electrónico">
+          <svg fill="none" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
         </a>
       </div>
     </div>
@@ -865,63 +487,74 @@
         <li><a href="#solucion">Solución</a></li>
         <li><a href="#como-funciona">Cómo funciona</a></li>
         <li><a href="#impacto">Impacto</a></li>
-        <li><a href="#">Acceder</a></li>
+        <li><a href="#contacto">Solicitar demo</a></li>
       </ul>
     </div>
     <div class="footer-col">
       <h4>Organización</h4>
       <ul>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#">Equipo</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="#blog">Blog</a></li>
         <li><a href="#contacto">Contacto</a></li>
+        <li><a href="/privacidad">Privacidad</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Contacto</h4>
+      <h4>Países</h4>
       <ul>
-        <li><a href="mailto:info@digisalud.org">info@digisalud.org</a></li>
-        <li><a href="#">WhatsApp</a></li>
-        <li><a href="#">Solicitar demo</a></li>
-        <li><a href="#">Política de privacidad</a></li>
+        <li><a href="https://servicios.digisalud.org/jornadas/" target="_blank" rel="noopener">Venezuela</a></li>
+        <li><a href="http://servicios.digisalud.org/co/" target="_blank" rel="noopener">Colombia</a></li>
+        <li><a href="http://sv.digisaludlatam.org/sv/" target="_blank" rel="noopener">El Salvador</a></li>
+        <li><a href="http://servicios.digisalud.org/co/" target="_blank" rel="noopener">Guatemala</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <span>© 2026 Digisalud. Todos los derechos reservados.</span>
     <div style="display:flex;gap:24px">
-      <a href="#">Privacidad</a>
-      <a href="#">Términos</a>
-      <a href="#">digisalud.org</a>
+      <a href="/privacidad">Privacidad</a>
+      <a href="/terminos">Términos</a>
+      <a href="https://digisalud.org">digisalud.org</a>
     </div>
   </div>
 </footer>
 
 <script>
-// Header scroll effect
+// ─── Header scroll ───
 const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
-});
+window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
 
-// Mobile nav
+// ─── Mobile nav ───
 function toggleNav() {
   const nav = document.getElementById('nav');
-  nav.classList.toggle('open');
+  const btn = document.getElementById('hamburger');
+  const open = nav.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
 }
 
-// Intersection Observer for fade-ins
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-    }
-  });
-}, { threshold: 0.12 });
+// ─── Dropdown ───
+function toggleDropdown() {
+  const menu = document.getElementById('plataformaMenu');
+  const btn  = document.getElementById('plataformaBtn');
+  const open = menu.classList.toggle('open');
+  btn.setAttribute('aria-expanded', open);
+}
+document.addEventListener('click', (e) => {
+  const btn  = document.getElementById('plataformaBtn');
+  const menu = document.getElementById('plataformaMenu');
+  if (btn && !btn.contains(e.target) && !menu.contains(e.target)) {
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', false);
+  }
+});
 
+// ─── Fade-in observer ───
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// Smooth scroll for nav links
+// ─── Smooth scroll ───
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const target = document.querySelector(a.getAttribute('href'));
@@ -933,118 +566,64 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-// Animate bars on load
-document.querySelectorAll('.bar, .bar2').forEach((bar, i) => {
+// ─── Bar animation ───
+document.querySelectorAll('.bar').forEach((bar, i) => {
   bar.style.animationDelay = (i * 0.08) + 's';
 });
 
-
-function toggleDropdown() {
-  document.getElementById('plataformaMenu').classList.toggle('open');
+// ─── Form submit (placeholder hasta integrar API) ───
+function handleFormSubmit(e) {
+  const btn = e.target;
+  btn.textContent = '✓ Mensaje enviado';
+  btn.style.background = '#10B981';
+  btn.disabled = true;
+  // TODO: reemplazar con fetch a Resend / Brevo API
+  // fetch('/api/contact', { method: 'POST', body: new FormData(form) })
 }
 
-// Cierra al hacer clic fuera
-document.addEventListener('click', function(e) {
-  const btn = document.getElementById('plataformaBtn');
-  const menu = document.getElementById('plataformaMenu');
-  if (!btn.contains(e.target) && !menu.contains(e.target)) {
-    menu.classList.remove('open');
+// ─── Carousel ───
+(function() {
+  const track = document.getElementById('alliesTrack');
+  const carousel = document.getElementById('alliesCarousel');
+  const dotsContainer = document.getElementById('carouselDots');
+  let currentIndex = 0, itemsVisible = 0, totalItems = 0;
+
+  function getItemWidth() {
+    const card = track.querySelector('.ally-card');
+    if (!card) return 152;
+    const gap = parseInt(window.getComputedStyle(track).gap) || 24;
+    return card.offsetWidth + gap;
   }
-});
 
+  function setup() {
+    totalItems = track.querySelectorAll('.ally-card').length;
+    itemsVisible = Math.max(1, Math.floor(carousel.offsetWidth / getItemWidth()));
+    dotsContainer.innerHTML = '';
+    const pages = Math.ceil(totalItems / itemsVisible);
+    for (let i = 0; i < pages; i++) {
+      const dot = document.createElement('button');
+      dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', 'Página ' + (i+1));
+      dot.addEventListener('click', () => goTo(i * itemsVisible));
+      dotsContainer.appendChild(dot);
+    }
+    goTo(0);
+  }
 
+  function goTo(index) {
+    const max = Math.max(0, totalItems - itemsVisible);
+    currentIndex = Math.max(0, Math.min(index, max));
+    track.style.transform = `translateX(-${currentIndex * getItemWidth()}px)`;
+    const activePage = Math.floor(currentIndex / Math.max(1, itemsVisible));
+    dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === activePage));
+    document.getElementById('arrowLeft').style.opacity = currentIndex === 0 ? '.35' : '1';
+    document.getElementById('arrowRight').style.opacity = currentIndex >= max ? '.35' : '1';
+  }
+
+  window.scrollCarousel = dir => goTo(currentIndex + dir);
+  window.addEventListener('resize', setup);
+  setup();
+})();
 </script>
-
-  <script>
-    (function() {
-      const track = document.getElementById('alliesTrack');
-      const carousel = document.getElementById('alliesCarousel');
-      const dotsContainer = document.getElementById('carouselDots');
-
-      let currentIndex = 0;
-      let itemsVisible = 0;
-      let totalItems = 0;
-      let totalPages = 0;
-      let isDragging = false;
-      let startX = 0;
-      let scrollStart = 0;
-
-      function getItemWidth() {
-        const card = track.querySelector('.ally-card');
-        if (!card) return 128;
-        const style = window.getComputedStyle(track);
-        const gap = parseInt(style.gap) || 28;
-        return card.offsetWidth + gap;
-      }
-
-      function setup() {
-        totalItems = track.querySelectorAll('.ally-card').length;
-        itemsVisible = Math.floor(carousel.offsetWidth / getItemWidth());
-        totalPages = Math.max(1, totalItems - itemsVisible + 1);
-
-        // Build dots
-        dotsContainer.innerHTML = '';
-        const pages = Math.ceil(totalItems / itemsVisible);
-        for (let i = 0; i < pages; i++) {
-          const dot = document.createElement('button');
-          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-          dot.addEventListener('click', () => goTo(i * itemsVisible));
-          dotsContainer.appendChild(dot);
-        }
-        goTo(0);
-      }
-
-      function goTo(index) {
-        const max = totalItems - itemsVisible;
-        currentIndex = Math.max(0, Math.min(index, max));
-        const offset = currentIndex * getItemWidth();
-        track.style.transform = `translateX(-${offset}px)`;
-        updateDots();
-        updateArrows();
-      }
-
-      function updateDots() {
-        const pages = Math.ceil(totalItems / itemsVisible);
-        const activePage = Math.floor(currentIndex / itemsVisible);
-        dotsContainer.querySelectorAll('.carousel-dot').forEach((d, i) => {
-          d.classList.toggle('active', i === activePage);
-        });
-      }
-
-      function updateArrows() {
-        document.getElementById('arrowLeft').style.opacity = currentIndex === 0 ? '0.35' : '1';
-        document.getElementById('arrowRight').style.opacity = currentIndex >= totalItems - itemsVisible ? '0.35' : '1';
-      }
-
-      window.scrollCarousel = function(dir) {
-        goTo(currentIndex + dir * Math.max(1, Math.floor(itemsVisible / 2)));
-      };
-
-      // Touch / drag support
-      track.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX; scrollStart = currentIndex; track.style.transition = 'none'; });
-      track.addEventListener('mousemove', e => {
-        if (!isDragging) return;
-        const diff = (startX - e.clientX) / getItemWidth();
-        track.style.transform = `translateX(-${(scrollStart + diff) * getItemWidth()}px)`;
-      });
-      track.addEventListener('mouseup', e => {
-        if (!isDragging) return;
-        isDragging = false;
-        track.style.transition = '';
-        const diff = Math.round((startX - e.clientX) / getItemWidth());
-        goTo(scrollStart + diff);
-      });
-      track.addEventListener('mouseleave', () => { if (isDragging) { isDragging = false; track.style.transition = ''; goTo(scrollStart); } });
-
-      track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; scrollStart = currentIndex; }, { passive: true });
-      track.addEventListener('touchend', e => {
-        const diff = Math.round((startX - e.changedTouches[0].clientX) / getItemWidth());
-        goTo(scrollStart + diff);
-      });
-
-      window.addEventListener('resize', setup);
-      setup();
-    })();
-  </script>
 </body>
 </html>
